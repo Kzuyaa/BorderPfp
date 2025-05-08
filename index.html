@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PfpMaker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+        <div>
+            <input type="number" min="0" max="50" step="1" id="border" placeholder="max 100">
+
+        </div>
+        <form action="">
+            <label for="fileInput" class="custom-file-upload">Fotoğraf Yükle</label>
+            <input type="file" id="fileInput" style="display: none;">
+            <img id="preview" src="" alt="Yüklenen fotoğraf burada görünecek" width="300" height="300"
+                style="display: none; background-color: transparent;" />
+            <button type="button" onclick="borderchange()">Border Radius</button>
+            <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+            <button type="button" id="downloadButton" onclick="downloadImage()">Download</button>
+        </form>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
